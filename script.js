@@ -160,28 +160,7 @@ document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(
   }).join('');
 })();
 
-/* ── ABOUT CHART (CANDLESTICK) ──────────────────── */
-(function buildAboutChart() {
-  if (!aboutChart) return;
-
-  const candles = [
-    { up: true,  body: 22, wickTop: 10, wickBot: 7  },
-    { up: false, body: 14, wickTop: 8,  wickBot: 5  },
-    { up: true,  body: 30, wickTop: 8,  wickBot: 9  },
-    { up: true,  body: 20, wickTop: 11, wickBot: 6  },
-    { up: false, body: 12, wickTop: 6,  wickBot: 7  },
-    { up: true,  body: 36, wickTop: 10, wickBot: 10 },
-    { up: true,  body: 42, wickTop: 8,  wickBot: 13 },
-  ];
-
-  aboutChart.innerHTML = candles.map((c, i) =>
-    `<div class="candle-wrap" style="animation:fadeIn 0.4s ease forwards ${i * 0.08}s;opacity:0">
-      <div class="candle-wick" style="height:${c.wickTop}px"></div>
-      <div class="candle-body ${c.up ? 'candle-green' : 'candle-red'}" style="height:${c.body}px"></div>
-      <div class="candle-wick" style="height:${c.wickBot}px"></div>
-    </div>`
-  ).join('');
-})();
+/* ── ABOUT CHART → replaced by TradingView embed ── */
 
 /* ── ADD KEYFRAMES DYNAMICALLY ───────────────────── */
 (function injectKeyframes() {
